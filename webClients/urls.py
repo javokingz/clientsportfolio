@@ -16,10 +16,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from client.views import ClientListView
+from contact.views import Contact
 
 urlpatterns = [
     path('', ClientListView.as_view(), name = 'index'),
     path('', include('client.urls')),
+    path('', include('contact.urls')),
+    path('', include('reporte.urls')),
     #path('login', LoginView.as_view(), name = 'login'),
     path('admin/', admin.site.urls),
 ]
