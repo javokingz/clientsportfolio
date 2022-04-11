@@ -27,8 +27,16 @@ SECRET_KEY = 'django-insecure-^_9o+ssy#^zh^1vv09n$rmq$#pq0zztv$-d)+3w4p8^z&yvbt@
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+# swagger Elemento de configuración
+# SWAGGER_SETTINGS = {
+#     # Estilo basico
+#     'SECURITY_DEFINITIONS': {
+#         "basic":{
+#             'type': 'basic'
+#         }
+#     },
+# }
+REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
 # Application definition
 
 INSTALLED_APPS = [
@@ -41,6 +49,8 @@ INSTALLED_APPS = [
     'client',
     'contact',
     'rest_framework',
+    'rest_framework_swagger',
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
